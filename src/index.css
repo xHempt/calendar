@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.highlight {
+  color: #42cbf5;
+}
+
+.calendar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-grid {
+  padding: 1em;
+  width: min(750px, 90%);
+  min-height: 50vh;
+  display: grid;
+  grid-template: 2em repeat(6, 1fr) / repeat(7, 1fr);
+  gap: 2px;
+  margin: 0 auto;
+  border-radius: 1em;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-grid > * {
+  border: 1px solid rgb(240, 240, 240);
+  background: #fff;
+}
+
+.calendar-date {
+  margin: 2em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+button {
+  width: 1.75em;
+  height: 1.75em;
+  background-color: #42cbf5;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.day-name {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background-color: #42cbf5;
+  padding: 0 .5em;
+  border: none;
+}
+
+.day {
+  padding: 0 .5em;
+  text-decoration: none;
+  color: #333;
+}
+
+.day:hover {
+  background-color: #42cbf53a;
+}
+
+.plans-for-date {
+  width: min(750px, 90%);
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.plans-for-date a {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  background-color: #42cbf5;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.plans-for-date h1 {
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+
+.add-plans {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.add-plans form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5em;
+  margin-top: 1em;
+}
+
+.add-plans input,
+.plan {
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.75em 1em;
+  border-radius: 1em;
+  background-color: #fff;
+}
+
+.add-plans input:first-child {
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+.plan {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.plan h3 {
+  display: inline;
+}
+
+@media screen and (min-width: 750px) {
+  .calendar-grid {
+    min-height: 75vh;
+  }
+}
